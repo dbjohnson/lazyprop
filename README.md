@@ -16,14 +16,14 @@ Decorate any class method to memoize / cache object properties.
 from lazyprop import lazyprop
 
 class Foo(object):
-	def __init__(self):
-		self.load_count = 0
+    def __init__(self):
+        self.load_count = 0
 
-	@lazyprop
-	def lazy(self):
-		self.load_count += 1
-		
-		
+    @lazyprop
+    def lazy(self):
+        self.load_count += 1
+        
+        
 >> f = Foo()
 >> f.lazy
 >> f.lazy  # second access should use cached result
